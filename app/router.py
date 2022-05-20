@@ -8,8 +8,6 @@ from database import get_db
 
 router = APIRouter()
 
-secret = "pR9ZbccoRF3VS5w87QYDrWtEaCvO2s4vv2vgX9Ptg=="
-
 
 @router.post("/authentication/", response_model=schemas.ResponseSchema)
 def authentication(user: schemas.UserAuthentication, db: Session = Depends(get_db)) -> schemas.ResponseSchema:
